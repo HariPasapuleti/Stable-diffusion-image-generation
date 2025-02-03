@@ -9,6 +9,10 @@ This repository contains a project for generating images using the Stable Diffus
 - **Hugging Face Integration:** Seamless integration with Hugging Face models and libraries.
 - **CUDA Support:** Leverages GPU for faster inference.
 
+## Demo
+
+![Demo Video]([path/to/your/demo_video.mp4](https://www.youtube.com/watch?v=Aa1L32O1rVM))
+
 ## Installation
 
 1. Clone this repository:
