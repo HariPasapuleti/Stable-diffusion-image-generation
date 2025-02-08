@@ -34,46 +34,9 @@ Watch the demo [here](https://www.youtube.com/watch?v=F6JGbFse62U).
 
 ## Usage
 
-1. Define configuration settings:
-   ```python
-   class CFG:
-       device = "cuda"
-       seed = 42
-       generator = torch.Generator(device).manual_seed(seed)
-       image_gen_steps = 35
-       image_gen_model_id = "stabilityai/stable-diffusion-2"
-       image_gen_size = (400, 400)
-       image_gen_guidance_scale = 9
-       prompt_gen_model_id = "gpt2"
-   ```
-
-2. Load the Stable Diffusion pipeline:
-   ```python
-   from diffusers import StableDiffusionPipeline
-
-   pipeline = StableDiffusionPipeline.from_pretrained(
-       CFG.image_gen_model_id,
-       torch_dtype=torch.float16,
-       revision="fp16"
-   )
-   pipeline = pipeline.to(CFG.device)
-   ```
-
-3. Generate an image:
-   ```python
-   def generate_image(prompt, model):
-       image = model(
-           prompt, num_inference_steps=CFG.image_gen_steps,
-           generator=CFG.generator,
-           guidance_scale=CFG.image_gen_guidance_scale
-       ).images[0]
-
-       image = image.resize(CFG.image_gen_size)
-       return image
-
-   generated_image = generate_image("Indian king on horse", pipeline)
-   generated_image.show()
-   ```
+1. Set up your configuration parameters such as device, seed, and model settings.
+2. Load the Stable Diffusion pipeline from Hugging Face.
+3. Provide a textual prompt, and the system will generate an image.
 
 ## Troubleshooting
 
