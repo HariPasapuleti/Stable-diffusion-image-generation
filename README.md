@@ -11,7 +11,7 @@ This repository contains a project for generating images using the Stable Diffus
 
 ## Demo
 
-Watch the demo [here](https://www.youtube.com/watch?v=Aa1L32O1rVM).
+Watch the demo [here](https://www.youtube.com/watch?v=F6JGbFse62U).
 
 ## Installation
 
